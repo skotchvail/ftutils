@@ -27,12 +27,6 @@
 #import "FTUtils+UIGestureRecognizer.h"
 #import <objc/runtime.h>
 
-@interface UIGestureRecognizer()
-
-- (void)handleAction:(UIGestureRecognizer *)recognizer;
-
-@end
-
 static char * kFTGestureActionKey   = "ft_gestureAction";
 static char * kFTGestureDisabledKey = "ft_gestureDisabled";
 
