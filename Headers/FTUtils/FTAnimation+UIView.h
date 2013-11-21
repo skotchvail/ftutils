@@ -54,7 +54,7 @@
  neither message will be sent.
  @param startSelector A selector to be messaged on *delegate* right before the start 
  of the animation. This parameter can be `nil`.
- @param startSelector A selector to be messaged on *delegate* after the animation has
+ @param stopSelector A selector to be messaged on *delegate* after the animation has
  finished normally or been cancelled. This parameter can be `nil`.
 */
 - (void)slideInFrom:(FTAnimationDirection)direction duration:(NSTimeInterval)duration delegate:(id)delegate 
@@ -80,7 +80,7 @@
  neither message will be sent.
  @param startSelector A selector to be messaged on *delegate* right before the start 
  of the animation. This parameter can be `nil`.
- @param startSelector A selector to be messaged on *delegate* after the animation has
+ @param stopSelector A selector to be messaged on *delegate* after the animation has
  finished normally or been cancelled. This parameter can be `nil`.
 */
 - (void)slideOutTo:(FTAnimationDirection)direction duration:(NSTimeInterval)duration delegate:(id)delegate 
@@ -116,7 +116,7 @@
  neither message will be sent.
  @param startSelector A selector to be messaged on *delegate* right before the start 
  of the animation. This parameter can be `nil`.
- @param startSelector A selector to be messaged on *delegate* after the animation has
+ @param stopSelector A selector to be messaged on *delegate* after the animation has
  finished normally or been cancelled. This parameter can be `nil`.
 */
 - (void)backOutTo:(FTAnimationDirection)direction withFade:(BOOL)fade duration:(NSTimeInterval)duration delegate:(id)delegate 
@@ -144,7 +144,7 @@
  neither message will be sent.
  @param startSelector A selector to be messaged on *delegate* right before the start 
  of the animation. This parameter can be `nil`.
- @param startSelector A selector to be messaged on *delegate* after the animation has
+ @param stopSelector A selector to be messaged on *delegate* after the animation has
  finished normally or been cancelled. This parameter can be `nil`.
 */
 - (void)backInFrom:(FTAnimationDirection)direction withFade:(BOOL)fade duration:(NSTimeInterval)duration delegate:(id)delegate 
@@ -171,7 +171,6 @@
 /**
  Causes the view to fade in from invisible to fully opaque.
  
- @param direction The edge or corner of the screen where animation will end.
  @param duration The duration (in seconds) of the animation.
  @param delegate The *delegate* will be forwarded the standard `CAAnimationDelegate`
  methods.
@@ -187,7 +186,7 @@
  neither message will be sent.
  @param startSelector A selector to be messaged on *delegate* right before the start 
  of the animation. This parameter can be `nil`.
- @param startSelector A selector to be messaged on *delegate* after the animation has
+ @param stopSelector A selector to be messaged on *delegate* after the animation has
  finished normally or been cancelled. This parameter can be `nil`.
 */
 - (void)fadeIn:(NSTimeInterval)duration delegate:(id)delegate startSelector:(SEL)startSelector stopSelector:(SEL)stopSelector;
@@ -195,7 +194,6 @@
 /**
  Causes the view to fade out until it is invisible.
  
- @param direction The edge or corner of the screen where animation will end.
  @param duration The duration (in seconds) of the animation.
  @param delegate The *delegate* will be forwarded the standard `CAAnimationDelegate`
  methods.
@@ -211,7 +209,7 @@
  neither message will be sent.
  @param startSelector A selector to be messaged on *delegate* right before the start 
  of the animation. This parameter can be `nil`.
- @param startSelector A selector to be messaged on *delegate* after the animation has
+ @param stopSelector A selector to be messaged on *delegate* after the animation has
  finished normally or been cancelled. This parameter can be `nil`.
 */
 - (void)fadeOut:(NSTimeInterval)duration delegate:(id)delegate startSelector:(SEL)startSelector stopSelector:(SEL)stopSelector;
@@ -220,7 +218,6 @@
  Causes the background color of the view to fade in from invisible to completely
  opaque.
  
- @param direction The edge or corner of the screen where animation will end.
  @param duration The duration (in seconds) of the animation.
  @param delegate The *delegate* will be forwarded the standard `CAAnimationDelegate`
  methods.
@@ -237,7 +234,7 @@
  neither message will be sent.
  @param startSelector A selector to be messaged on *delegate* right before the start 
  of the animation. This parameter can be `nil`.
- @param startSelector A selector to be messaged on *delegate* after the animation has
+ @param stopSelector A selector to be messaged on *delegate* after the animation has
  finished normally or been cancelled. This parameter can be `nil`.
 */
 - (void)fadeBackgroundColorIn:(NSTimeInterval)duration delegate:(id)delegate 
@@ -246,7 +243,6 @@
 /**
  Causes the background color of the view to fade out until it is invisible.
  
- @param direction The edge or corner of the screen where animation will end.
  @param duration The duration (in seconds) of the animation.
  @param delegate The *delegate* will be forwarded the standard `CAAnimationDelegate`
  methods.
@@ -262,7 +258,7 @@
  neither message will be sent.
  @param startSelector A selector to be messaged on *delegate* right before the start 
  of the animation. This parameter can be `nil`.
- @param startSelector A selector to be messaged on *delegate* after the animation has
+ @param stopSelector A selector to be messaged on *delegate* after the animation has
  finished normally or been cancelled. This parameter can be `nil`.
 */
 - (void)fadeBackgroundColorOut:(NSTimeInterval)duration delegate:(id)delegate 

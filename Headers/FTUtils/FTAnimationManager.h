@@ -180,7 +180,7 @@ static inline CGPoint FTAnimationOffscreenCenterPoint(CGRect viewFrame, CGPoint 
  The maximum value (in points) that the bouncing animations will travel past their
  end value before coming to rest. The default is 10.0.
 */
-@property(assign) CGFloat overshootThreshold;
+@property(atomic, assign) CGFloat overshootThreshold;
 
 ///---------------------------------------------------------------------------
 /// @name Accessing the animation manager
